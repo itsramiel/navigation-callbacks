@@ -2,7 +2,7 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 export type NavigationType = {
   Home: undefined;
-  Profile: undefined;
+  Profile: { callback: () => void };
 };
 
 export type HomeProps = NativeStackScreenProps<NavigationType, "Home">;

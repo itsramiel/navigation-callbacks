@@ -1,14 +1,17 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Alert, Button, StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { HomeProps } from "../navigation/types";
 
-const Home = () => {
+const Home = ({ navigation }: HomeProps) => {
+  const congratulateUser = () => {
+    Alert.alert("Here is a congratulations for following this tutorial and this function is written in Home");
+  };
+
   return (
-    <View>
-      <Text>Home</Text>
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Button title="go to profile" onPress={() => navigation.navigate("Profile", { callback: congratulateUser })} />
     </View>
   );
 };
 
 export default Home;
-
-const styles = StyleSheet.create({});
