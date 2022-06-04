@@ -8,7 +8,7 @@ const Profile = ({ route }: ProfileProps) => {
 
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Button title="call passed callback" onPress={() => event.emit(eventName)} />
+      <Button title="call passed callback" onPress={() => event.emit(eventName, "rami")} />
     </View>
   );
 };

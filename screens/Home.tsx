@@ -6,8 +6,8 @@ import { useEvent } from "../event/EventProvider";
 const Home = ({ navigation }: HomeProps) => {
   const event = useEvent();
 
-  const congratulateUser = () => {
-    Alert.alert("Here is a congratulations for following this tutorial and this function is written in Home");
+  const congratulateUser = (name: string) => {
+    Alert.alert(`Hi ${name}, Here is a congratulations for following this tutorial and this function is written in Home`);
   };
 
   useEffect(() => {
