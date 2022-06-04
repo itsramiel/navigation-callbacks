@@ -1,9 +1,11 @@
-import { Alert, Button, StyleSheet, Text, View } from "react-native";
+import { Alert, Button, View } from "react-native";
 import React, { useEffect } from "react";
 import { HomeProps } from "../navigation/types";
-import { event } from "../event";
+import { useEvent } from "../event/EventProvider";
 
 const Home = ({ navigation }: HomeProps) => {
+  const event = useEvent();
+
   const congratulateUser = () => {
     Alert.alert("Here is a congratulations for following this tutorial and this function is written in Home");
   };

@@ -1,5 +1,10 @@
+import EventProvider from "./event/EventProvider";
 import Navigation from "./navigation";
 
 export default function App() {
-  return <Navigation />;
+  return (
+    <EventProvider>
+      <Navigation />
+    </EventProvider>
+  );
 }
